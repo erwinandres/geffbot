@@ -1,0 +1,280 @@
+/**
+ * textCSS
+ * By Erwin Larios.
+ *
+ * A starting point to styling text.
+ */
+
+/**
+ * Mini Reset
+ *
+ * textCSS works better with a good css reset, so if you have
+ * one use it and remove this reset block. However, if you
+ * pefrer not to, you can keep this block.
+ */
+p, h1, h2, h3, h4, h5, h6, pre, ul, ol, dl, dt, dd table, th, td{
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Note: Combine this styles with the one in your projects
+ * reset file if you are using one.
+ *
+ * A good sans-serif system fonts stack with fallbacks for most
+ * popular operative systems.
+ */
+html {
+  font-family: -apple-system,
+               BlinkMacSystemFont,
+               "Segoe UI",
+               Roboto,
+               Oxygen-Sans,
+               Ubuntu,
+               Cantarell,
+               "Helvetica Neue",
+               sans-serif;
+  font-size: 150%;
+  line-height: 1.5;
+}
+
+@media (max-width: 800px) {
+  html {
+    font-size: 125%;
+  }
+}
+
+@media (max-width: 560px) {
+  html {
+    font-size: 100%;
+  }
+}
+/**
+* Make a "notebook-like" background pattern with
+* background-image and linear-gradient.
+*
+* This is for testing the baseline only. Make your own tests and
+* remove it after you feel satisfied whit your baseline.
+*/
+body {
+  margin: 0 auto;
+  width: 85%;
+  max-width: 760px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/**
+ * Paragraphs
+ *
+ * Sets the baseline to a height of 1.5.
+ */
+p {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+/**
+ * Headings
+ *
+ * Modular scale for headings.
+ * Adjusts de line-height property for every heading level to
+ * meet the project's baseline value.
+ *
+ */
+ h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 3em;
+  line-height: 1;
+  margin-top: 6rem;
+}
+
+h2 {
+  font-size: 2.5em;
+  line-height: 1.2;
+  margin-top: 4.5rem;
+}
+
+h3 {
+  font-size: 2em;
+  line-height: 1.5;
+  margin-top: 3rem;
+}
+
+h4 {
+  font-size: 1.5em;
+  line-height: 1;
+}
+
+h5 {
+  font-size: 1.2em;
+  line-height: 1.26;
+  margin-bottom: 0;
+}
+
+h6 {
+  font-size: 1em;
+  font-style: italic;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/** Lists */
+ul, ol {
+  margin: 0 0 1.5rem 0;
+}
+
+ul {
+  list-style: disc inside;
+}
+
+ol {
+  list-style: decimal inside;
+}
+
+li {
+  line-height: 1.5;
+}
+
+ul ul,
+ol ol {
+  margin: 0 0 0 4em;
+}
+
+dl {
+  margin-bottom: 1.5rem;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 4em;
+}
+
+/** Tables */
+table {
+  width: 100%;
+  border-spacing: 2px 0;
+}
+
+/** Quotes */
+blockquote {
+  margin: 0 0 1.5rem 4em;
+  border-left: 5px solid #ccc;
+  padding-left: 10px;
+  line-height: 1.5;
+}
+
+cite {
+  line-height: 1.5;
+}
+
+@media (max-width: 840px) and (min-width: 800px) {
+  ul ul,
+  ol ol,
+  blockquote,
+  dd {
+    margin-left: 2em;
+  }
+}
+
+@media (max-width: 700px) {
+  ul ul,
+  ol ol,
+  blockquote,
+  dd {
+    margin-left: 2em;
+  }
+}
+
+/** Others */
+/**
+ * Remove the line-height in superscript and subscript text to
+ * so don't break the rythm.
+ */
+sup, sub {
+  font-size: .75em;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+small {
+  font-size: .8em;
+}
+
+/** Medium style hr */
+hr {
+  display: block;
+  height: 1.5rem;
+  margin: 1.5rem auto;
+  color: #333;
+  border: 0;
+  text-align: center;
+}
+
+hr:before {
+  content: "···";
+  letter-spacing: 1em;
+}
+
+/**
+ * Code
+ *
+ * A good monospace font stack.
+ * Gives a light grey background to inine code and pre blocks.
+ * Makes inline code a little smaller.
+ */
+pre, code {
+  font-family: Consolas,
+               Monaco,
+               'Andale Mono',
+               'Ubuntu Mono',
+               monospace;
+  font-size: 1em;
+  line-height: 1.5;
+  background: #eee;
+}
+
+code {
+  font-size: .9em;
+  line-height: 0;
+}
+
+pre {
+  margin-bottom: 1.5rem;
+}
+
+/** Links */
+a {
+  color: #09f;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active,
+a:focus {
+  position: static;
+}
+
+a:focus {
+  outline: thin dotted;
+}
